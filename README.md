@@ -9,3 +9,6 @@ Git explorer operates as your run of the mill MVVM app which utilises a REST API
 A recycler view is utilised to display the file contents. This feature was included in spite of the brief for the app development. The brief requested utilising as few unnecessary 3rd party libraries as possible. But by including a file viewer, I could explore both the jsonReader capabilities and Moshi.
 They were utilised in slightly different settings. The jsonReader was employed when there was a vast number of variables (extensive details of every repository - including a description of the owner in each repository). To save memory, the jsonReader was utilised to iterate through the json and then extract essential values. However, due to the nature of jsonReader the value had to be anticipated, for instance if a string was null then an error was thrown. Therefore, only variables in the json that were highly reliable were utilised in the app.
 Moshi was employed when a high proportion of the data being utilised by the json, thereby keeping needless expenditure of memory to a minimum.
+
+
+demo: https://youtu.be/utlh90PQLT8
