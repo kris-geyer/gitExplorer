@@ -4,9 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".View.MainActivity">
+    tools:context=".View.MainActivity"
+    android:background="@color/colorPrimary"
+    >
 
     <TextView
+        android:textColor="#FFF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/main_instructions"
@@ -14,21 +17,28 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.75" />
+        android:textSize="18sp"
+        app:layout_constraintVertical_bias="0.75"
+        />
 
     <EditText
+        android:textColorHint="#FFF"
+        android:textColor="#FFF"
         android:id="@+id/etRepos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/etRepose_hint"
+        android:textSize="18sp"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Switch
+        android:textColor="#FFF"
         android:id="@+id/swKnownName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/btnSubmit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,12 +46,15 @@
         android:text="I know the name of the repository"/>
 
     <Button
+        android:textColor="#FFF"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etRepos"
         android:text="@string/btn_submit"
+        android:textSize="18sp"
         android:id="@+id/btnSubmit"
+        android:background="@color/colorAccent"
         />
 
 

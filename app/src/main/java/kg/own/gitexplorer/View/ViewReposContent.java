@@ -77,6 +77,7 @@ public class ViewReposContent extends AppCompatActivity implements ReposViewInte
     public void onBackPressed() {
         if(path == null){
             finish();
+            return;
         }
 
         if(path.equals("")){

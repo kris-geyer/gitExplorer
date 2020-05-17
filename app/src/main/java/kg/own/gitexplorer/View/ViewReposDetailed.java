@@ -116,6 +116,7 @@ public class ViewReposDetailed extends AppCompatActivity implements View.OnClick
                 break;
             case R.id.btnSeeReadMe:
                 intent = new Intent(this, SeeREADME.class);
+                intent.putExtra("readMeFileName", readmeFileName);
                 intent.putExtra("repositoryToLoad", repositoryToLoad);
                 intent.putExtra("author", author);
                 startActivity(intent);

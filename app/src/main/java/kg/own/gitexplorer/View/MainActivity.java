@@ -71,9 +71,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(repos== null){
                     return;
                 }
-                if(repos.size() == 0){
-                    Toast.makeText(MainActivity.this, "User has no repositories", Toast.LENGTH_SHORT).show();
-                }else{
+                if(repos.size() > 0){
                     Switch aSwitch = findViewById(R.id.swKnownName);
 
                     if(aSwitch.isChecked()){

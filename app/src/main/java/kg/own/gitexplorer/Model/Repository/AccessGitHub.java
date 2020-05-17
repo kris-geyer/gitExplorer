@@ -63,7 +63,6 @@ public class AccessGitHub extends AsyncTask<Void, Void, Void> {
             }
             Timber.i("destination: %s" ,destination);
             httpsURLConnection = initializeConnection(destination.toString());
-            httpsURLConnection.getErrorStream();
 
             if(httpsURLConnection.getResponseCode() == 200){
                 String json = returnRawJson(httpsURLConnection.getInputStream());
@@ -123,6 +122,7 @@ public class AccessGitHub extends AsyncTask<Void, Void, Void> {
     private HttpsURLConnection initializeConnection(String destination) throws IOException {
         URL github_endpoint = new URL(destination);
         HttpsURLConnection httpsURLConnection = (HttpsURLConnection) github_endpoint.openConnection();
+        httpsURLConnection.setRequestProperty("User-Agent", "github-explorer-app-v0.1");
         httpsURLConnection.setReadTimeout(10000);
         httpsURLConnection.setConnectTimeout(150000);
         return httpsURLConnection;

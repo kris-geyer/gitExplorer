@@ -38,4 +38,9 @@ public class GithubRepos  {
 
         return detailedRepos;
     }
+
+    public void getContent(String author, String repositoryToLoad, String readMeFileName, AccessGitHubContentInterface accessGitHubContentInterface) {
+        AccessGitHubContent accessGitHubContent = new AccessGitHubContent(author, repositoryToLoad, readMeFileName, accessGitHubContentInterface);
+        accessGitHubContent.execute();
+    }
 }
